@@ -25,14 +25,14 @@
     left: calc(39% - 1.5vh);
     transform: rotate(-45deg);
 
-    border-bottom-right-radius: 20%;
+    border-bottom-right-radius: 45%;
 }
 
 #coracao1:after {
     transform: rotate(45deg);
     left: calc(60% - 1.5vh);
 
-    border-bottom-left-radius: 20%;
+    border-bottom-left-radius: 45%;
 }
 
 @keyframes escala {
