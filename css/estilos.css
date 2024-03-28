@@ -1,5 +1,6 @@
 body {
     background-color: #faee81;
+    perspective: 1000px;
 }
 
 .non-selectable {
@@ -7,9 +8,4 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
-
-#camada2 {
-    position: absolute;
-    z-index: 1;
 }

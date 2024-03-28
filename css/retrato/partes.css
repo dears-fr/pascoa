@@ -1,0 +1,28 @@
+#parte-baixo, #parte-cima {
+    position: absolute;
+    overflow: hidden;
+
+    width: 80vw;
+    height: 56.5vw;
+    
+    left: calc(50vw - 40vw);
+
+    transition: transform 1.5s ease;
+    transform-origin: top;
+}
+
+#parte-baixo {
+    top: 80vw;
+}
+
+#parte-cima {
+    top: calc(80vw - 56.5vw);
+}
+
+.dobrado {
+    transform: rotateX(180deg);
+}
+
+#parte-baixo > * {
+    transform-style: preserve-3d;
+}

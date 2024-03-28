@@ -1,0 +1,41 @@
+#envelope {
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+
+    width: 82vw;
+    height: 58.5vw;
+    
+    top: 23vw;
+    left: calc(49vw - 40vw);
+
+    background-color: #4cc6ff;
+    transition: all 3s ease;
+}
+
+.tira-envelope {
+    animation: tirando-envelope 2s forwards;
+}
+
+.coloca-envelope {
+    animation: colocando-envelope 2s forwards;
+}
+
+@keyframes tirando-envelope{
+    0% {
+        top: 23vw;
+        
+    }
+    100% {
+        top: 148vw;
+    }
+}
+
+@keyframes colocando-envelope{
+    0% {
+        top: 148vw;
+    }
+    100% {
+        top: 23vw;
+    }
+}
