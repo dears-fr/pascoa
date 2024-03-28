@@ -1,0 +1,25 @@
+#papel {
+    background-color: #6acffe;
+
+    position: absolute;
+    z-index: 0;
+
+    width: 80vw;
+    height: 113vw;
+    
+    left: calc(50vw - 40vw);
+    top: calc(40vh - 56.5vw);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#design-interno {
+    background-color: #94ddff;
+
+    width: 80%;
+    height: 80%;
+
+    border-radius: 3vw;
+}

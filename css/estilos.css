@@ -1,0 +1,8 @@
+body {
+    background-color: #81fa81;
+}
+
+#camada2 {
+    position: absolute;
+    z-index: 1;
+}

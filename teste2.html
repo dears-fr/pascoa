@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grama de Triângulos</title>
+<style>
+  .grass-div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #5C9723; /* Cor da grama */
+    clip-path: polygon(0 50%, 20% 0, 40% 50%, 60% 0, 80% 50%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .bottom {
+    width: 100%;
+    height: 20px;
+    background-color: #5C9723; /* Mesma cor da grama */
+  }
+</style>
+</head>
+<body>
+
+<div class="grass-div"></div>
+<div class="bottom"></div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+#coracao1 {
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+
+    transform: rotate(9deg);
+
+    animation: escala 2s infinite;
+
+    border: 5px;
+    border-color: black;
+}
+
+#coracao1:before, #coracao1:after {
+    content: '';
+    position: absolute;
+    background-color: red;
+
+    width: 3vh;
+    height: 4.8vh;
+
+    border-radius: 3vh 3vh 0 0;
+}
+
+#coracao1:before {
+    left: calc(50% - 2vh);
+    transform: rotate(-45deg);
+}
+
+#coracao1:after {
+    transform: rotate(45deg);
+    left: calc(50% - 0.8vh);
+}
+
+@keyframes escala {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+}

@@ -1,0 +1,14 @@
+.love-light-regular {
+    font-family: "Love Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+.fonte-coracao {
+    position: absolute;
+    z-index: 2;
+    top: -0.3vh;
+    left: 1.5vh;
+    font-size: 1.7vh;
+    color: aliceblue;
+}

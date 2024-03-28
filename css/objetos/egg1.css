@@ -1,0 +1,47 @@
+#egg1 {
+    top: 39vh;
+    left: 0vw;
+    width: 5.65vh;
+    height: 10vh;
+    position: absolute;
+    overflow: hidden;
+    rotate: -5deg;
+    transition-duration: 0.3s;
+}
+
+#coelho {
+    position: absolute;
+    width: 5.65vh;
+    height: 6vh;
+    background-image: url("../../images/arte/coelho-egg1.png");
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.6s;
+}
+
+.coelho-oculto {
+    top: 3.5vh;
+}
+
+.coelho-visivel {
+    top: 0.8vh;
+}
+
+#metade-egg {
+    position: absolute;
+    width: 5.65vh;
+    height: 4vh;
+    top: calc(100% - 4vh);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+#rachado {
+    position: absolute;
+    z-index: 1;
+    width: 5.65vh;
+    height: 1vh;
+    top: calc(100% - 4vh - 0.9vh);
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(0 100%, 12.5% 0, 25% 100%, 37.5% 0, 50% 100%, 62.5% 0, 75% 100%, 87.5% 0, 100% 100%);
+}
