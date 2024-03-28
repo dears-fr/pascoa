@@ -2,8 +2,8 @@
     width: 5.65vh;
     height: 10vh;
     position: absolute;
-    top: calc(95vw - 5vh);
-    left: 0vw;
+    top: calc(87% - 10%);
+    left: 0%;
     overflow: hidden;
     rotate: -5deg;
     transition-duration: 0.3s;
