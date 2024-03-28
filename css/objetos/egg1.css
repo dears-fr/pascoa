@@ -2,7 +2,7 @@
     width: 5.65vh;
     height: 10vh;
     position: absolute;
-    top: 85vw;
+    top: calc(95vw - 5vh);
     left: 0vw;
     overflow: hidden;
     rotate: -5deg;
