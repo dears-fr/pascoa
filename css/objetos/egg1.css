@@ -1,9 +1,9 @@
 #egg1 {
-    top: 39vh;
-    left: 0vw;
     width: 5.65vh;
     height: 10vh;
     position: absolute;
+    top: 39vh;
+    left: 0vw;
     overflow: hidden;
     rotate: -5deg;
     transition-duration: 0.3s;
