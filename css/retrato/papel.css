@@ -17,9 +17,10 @@
 
 #design-interno {
     background-color: #94ddff;
-
     width: 80%;
     height: 80%;
+    position: absolute;
+    overflow: hidden;
 
-    border-radius: 3vw;
+    border-radius: 3%;
 }
