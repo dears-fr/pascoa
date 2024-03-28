@@ -2,6 +2,13 @@ body {
     background-color: #81fa81;
 }
 
+.non-selectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 #camada2 {
     position: absolute;
     z-index: 1;
