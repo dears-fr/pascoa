@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="css/fontes/fonte-coracao1.css">
 
     <title>mini-carta</title>
+
+    <style>
+        body {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div id="papel">
@@ -45,6 +51,12 @@
         
     </div>
     <div id="camada3"></div>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.style.display = 'block';
+        });
+    </script>
 
     <script src="js/script.js"></script>
 </body>
