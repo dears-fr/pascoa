@@ -2,8 +2,8 @@
     width: 6vh;
     height: 6vh;
     position: absolute;
-    top: calc(13% - 10%);
-    right: calc(15% - 10%);
+    top: calc(10% - 3vh);
+    right: calc(12% - 3vh);
 
     transform: rotate(9deg);
 
@@ -15,20 +15,24 @@
     position: absolute;
     background-color: red;
 
-    width: 3vh;
-    height: 4.8vh;
+    width: 50%;
+    height: 80%;
 
-    border-radius: 3vh 3vh 0 0;
+    border-radius: 45% 45% 0 0;
 }
 
 #coracao1:before {
     left: calc(39% - 1.5vh);
     transform: rotate(-45deg);
+
+    border-bottom-right-radius: 20%;
 }
 
 #coracao1:after {
     transform: rotate(45deg);
     left: calc(60% - 1.5vh);
+
+    border-bottom-left-radius: 20%;
 }
 
 @keyframes escala {
