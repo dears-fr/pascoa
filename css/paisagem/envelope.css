@@ -1,4 +1,4 @@
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) {
     .envelope {
         position: absolute;
         width: 82vw;

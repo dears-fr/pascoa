@@ -1,0 +1,20 @@
+@media screen and (orientation: landscape) {
+    .cedarville-cursive-regular {
+        font-family: "Cedarville Cursive", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    
+    .fonte-envelope {
+        font-size: 6vw;
+        padding-left: 4vw;
+        color: antiquewhite;
+        margin: 0;
+    }
+    
+    .texto-envelope {
+        position: absolute;
+        top: 45vh;
+    }
+}
+  

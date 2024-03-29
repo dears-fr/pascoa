@@ -1,4 +1,5 @@
-.love-light-regular {
+@media screen and (orientation: portrait) {
+  .love-light-regular {
     font-family: "Love Light", cursive;
     font-weight: 400;
     font-style: normal;
@@ -11,4 +12,5 @@
     left: 1.5vh;
     font-size: 1.7vh;
     color: aliceblue;
+}
 }

@@ -1,4 +1,4 @@
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) {
     #parte-baixo, #parte-cima {
         position: absolute;
         z-index: 2;
