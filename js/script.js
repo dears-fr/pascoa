@@ -62,6 +62,7 @@ function mouseClickedEnvelope() {
 
         setTimeout(function() {
             designInterno.classList.toggle('oculto');
+            egg1.classList.toggle('oculto');
         }, timeOutDesignInterno);
 
         if(envelopeTampa.classList.contains('desdobra-envelope')) {

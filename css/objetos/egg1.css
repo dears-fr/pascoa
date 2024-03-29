@@ -7,7 +7,7 @@
 
     overflow: hidden;
     rotate: -5deg;
-    transition-duration: 0.3s;
+    transition: transform 0.3s;
 }
 
 .coelho {
