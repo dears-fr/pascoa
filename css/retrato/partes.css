@@ -8,8 +8,6 @@
     
     left: calc(50vw - 40vw);
     transform-origin: top;
-
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
 }
 
 #parte-baixo {

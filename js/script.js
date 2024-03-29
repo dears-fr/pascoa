@@ -20,38 +20,46 @@ function mouseClickedEgg1(event) {
     }, 300);
 }
 
-const envelope = document.getElementById("envelope");
 const envelopeFundo = document.getElementById("envelope-fundo");
 const envelopeTampa = document.getElementById("envelope-tampa");
+const envelopeFrente = document.getElementById("envelope-frente");
 
 const carta = document.getElementById("parte-baixo");
 const cartaAfter = document.getElementById("parte-baixo");
 
-envelope.addEventListener("click", mouseClickedEnvelope);
 var isFirstClickInEnvelop = true;
 var isClickEnvelop = true;
 
+document.addEventListener('click', function(event) {
+    if(event.target.id === 'envelope-tampa' || event.target.id === 'envelope-fundo') {
+        mouseClickedEnvelope();
+    }
+})
+
 function mouseClickedEnvelope() {
     if(isFirstClickInEnvelop) {
-        envelope.classList.add('coloca-envelope');
         envelopeFundo.classList.add('coloca-envelope');
-        envelopeTampa.classList.add('dobra-envelope');
-
+        envelopeFrente.classList.add('coloca-envelope');
 
         carta.classList.add('dobrado');
         isFirstClickInEnvelop = false;
     }
 
     if(isClickEnvelop) {
-        envelope.classList.toggle('tira-envelope');
-        envelope.classList.toggle('coloca-envelope');
-
         envelopeFundo.classList.toggle('tira-envelope');
-        envelopeFundo.classList.toggle('coloca-envelope');
+        envelopeFrente.classList.toggle('tira-envelope');
 
-        envelopeTampa.classList.toggle('desdobra-envelope');
-        envelopeTampa.classList.toggle('dobra-envelope');
-        
+        envelopeFundo.classList.toggle('coloca-envelope');
+        envelopeFrente.classList.toggle('coloca-envelope');
+
+        if(envelopeTampa.classList.contains('desdobra-envelope')) {
+            setTimeout(function() {
+                envelopeTampa.classList.toggle('desdobra-envelope');
+            }, 3500);
+        } else {
+            envelopeTampa.classList.toggle('desdobra-envelope');
+        }
+
         carta.classList.toggle('dobrado');
         carta.classList.toggle('desdobrado');
         isClickEnvelop = false;
