@@ -32,10 +32,6 @@
     animation: desdobrando 4s forwards;
 }
 
-#parte-baixo > * {
-    transform-style: preserve-3d;
-}
-
 @keyframes dobrando {
     0% {
         transform: rotateX(0deg);

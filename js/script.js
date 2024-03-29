@@ -24,6 +24,8 @@ const envelopeFundo = document.getElementById("envelope-fundo");
 const envelopeTampa = document.getElementById("envelope-tampa");
 const envelopeFrente = document.getElementById("envelope-frente");
 
+const designInterno = document.getElementById("design-interno");
+
 const carta = document.getElementById("parte-baixo");
 const cartaAfter = document.getElementById("parte-baixo");
 
@@ -51,6 +53,16 @@ function mouseClickedEnvelope() {
 
         envelopeFundo.classList.toggle('coloca-envelope');
         envelopeFrente.classList.toggle('coloca-envelope');
+
+        let timeOutDesignInterno = 500;
+
+        if(designInterno.classList.contains('oculto')) {
+            timeOutDesignInterno = 2000;
+        }
+
+        setTimeout(function() {
+            designInterno.classList.toggle('oculto');
+        }, timeOutDesignInterno);
 
         if(envelopeTampa.classList.contains('desdobra-envelope')) {
             setTimeout(function() {

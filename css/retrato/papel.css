@@ -14,7 +14,7 @@
     perspective: 120vh;
 }
 
-#design-interno {
+.design-interno {
     background-color: #94ddff;
     width: 80%;
     height: 80%;
@@ -22,6 +22,10 @@
     overflow: hidden;
 
     border-radius: 3%;
+}
+
+.oculto {
+    opacity: 0;
 }
 
 .parte-cima {
