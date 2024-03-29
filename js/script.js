@@ -21,43 +21,54 @@ function mouseClickedEgg1(event) {
 }
 
 const envelope = document.getElementById("envelope");
+const envelopeFundo = document.getElementById("envelope-fundo");
+const envelopeTampa = document.getElementById("envelope-tampa");
+
+const carta = document.getElementById("parte-baixo");
+const cartaAfter = document.getElementById("parte-baixo");
+
 envelope.addEventListener("click", mouseClickedEnvelope);
-var isClickedEnvelop = 0;
+var isFirstClickInEnvelop = true;
+var isClickEnvelop = true;
 
 function mouseClickedEnvelope() {
-    if(isClickedEnvelop === 0) {
+    if(isFirstClickInEnvelop) {
+        envelope.classList.add('coloca-envelope');
+        envelopeFundo.classList.add('coloca-envelope');
+        envelopeTampa.classList.add('dobra-envelope');
+
+
+        carta.classList.add('dobrado');
+        isFirstClickInEnvelop = false;
+    }
+
+    if(isClickEnvelop) {
         envelope.classList.toggle('tira-envelope');
-        isClickedEnvelop = -1;
-        setTimeout(function() {
-            isClickedEnvelop = 1;
-        }, 2000);
-    } else if(isClickedEnvelop === 1) {
-        if(isClickedCarta) {
-            carta.classList.toggle('dobrado');
-            isClickedCarta = false;
-        }
         envelope.classList.toggle('coloca-envelope');
-        isClickedEnvelop = -1;
+
+        envelopeFundo.classList.toggle('tira-envelope');
+        envelopeFundo.classList.toggle('coloca-envelope');
+
+        envelopeTampa.classList.toggle('desdobra-envelope');
+        envelopeTampa.classList.toggle('dobra-envelope');
+        
+        carta.classList.toggle('dobrado');
+        carta.classList.toggle('desdobrado');
+        isClickEnvelop = false;
+
         setTimeout(function() {
-            isClickedEnvelop = 0;
-        }, 2000);
+            isClickEnvelop = true;
+        }, 4000);
     }
 }
 
-const carta = document.getElementById("parte-baixo");
+
 carta.addEventListener("click", mouseClickedCarta);
-var isClickedCarta = false;
 
 function mouseClickedCarta(event) {
-    //onclick="document.getElementById('parte-baixo').classList.toggle('dobrado')"
-    if(!isClickedCarta) {
-        carta.classList.toggle('dobrado');
-        isClickedCarta = true;
-    } else {
-        if(event.target.id === "metade-egg" || event.target.id === "rachado") {
-            mouseClickedEgg1(event);
-        } else if(event.target.id === "coelho") {
-            mouseClickedCoelho(event);
-        }
+    if(event.target.id === "metade-egg" || event.target.id === "rachado") {
+        mouseClickedEgg1(event);
+    } else if(event.target.id === "coelho") {
+        mouseClickedCoelho(event);
     }
 }

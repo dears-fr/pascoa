@@ -1,16 +1,46 @@
-#envelope {
+.envelope, .envelope-fundo, .envelope-tampa, .envelope-frente {
     position: absolute;
-    overflow: hidden;
-    z-index: 2;
-
     width: 82vw;
     height: 58.5vw;
+}
+
+.envelope, .envelope-fundo {
+    top: 23vw;
+    left: calc(49vw - 40vw);
+}
+
+.envelope-tampa, .envelope-frente {
+    top: 0;
+    left: 0;
+}
+
+.envelope {
+    position: relative;
+}
+
+.envelope-fundo {
+    background-color: #058bc9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    z-index: 1;
     
     top: 23vw;
     left: calc(49vw - 40vw);
-
-    background-color: #4cc6ff;
     transition: all 3s ease;
+}
+
+.envelope-tampa {
+    clip-path: polygon(0 0, 100% 0, 50% 30%);
+    transform-origin: top;
+    background-color: #02abf9;
+    z-index: 2;
+}
+
+.envelope-frente {
+    z-index: 2;
+    clip-path: polygon(0 0%, 50% 30%, 100% 0%, 100% 100%, 0 100%);
+    background-color: #33bdfd;
 }
 
 .tira-envelope {
@@ -18,13 +48,33 @@
 }
 
 .coloca-envelope {
-    animation: colocando-envelope 2s forwards;
+    animation: colocando-envelope 4s forwards;
+}
+
+.desdobra-envelope {
+    animation: desdobrando-envelope 2s forwards;
+}
+
+.dobra-envelope {
+    animation: dobrando-envelope 4s forwards;
+}
+
+#envelope > * {
+    transform-style: preserve-3d;
 }
 
 @keyframes tirando-envelope{
     0% {
         top: 23vw;
-        
+    }
+
+    10% {
+        top: 23vw;
+    }
+
+    30% {
+        transform: rotateX(15deg) rotateY(10deg) rotateZ(-10deg);
+        box-shadow: -10px 8px 10px rgba(0, 0, 0, 0.5);
     }
     100% {
         top: 148vw;
@@ -35,7 +85,45 @@
     0% {
         top: 148vw;
     }
+    25% {
+        top: 148vw;
+    }
+    50% {
+        transform: rotateX(-15deg) rotateY(-10deg) rotateZ(-10deg);
+        box-shadow: 10px -8px 10px rgba(0, 0, 0, 0.5);
+    }
+    96.25% {
+        top: 23vw;
+    }
     100% {
         top: 23vw;
+    }
+}
+
+@keyframes dobrando-envelope {
+    95% {
+        transform: rotateX(180deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: rotateX(0);
+        z-index: 2;
+    }
+}
+
+@keyframes desdobrando-envelope {
+    0% {
+        transform: rotateX(0);
+    }
+
+    9% {
+        transform: rotateX(180deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: rotateX(180deg);
+        z-index: 1;
     }
 }
