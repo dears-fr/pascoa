@@ -1,6 +1,6 @@
 body {
     background-color: #faee81;
-    perspective: 1000px;
+    perspective: 120vh;
 }
 
 .non-selectable {
