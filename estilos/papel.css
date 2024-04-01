@@ -10,7 +10,7 @@
     --top-papel: calc(var(--height-envelope) * 0.3 + var(--height-papel) * 0.1);
     --left-papel: calc(50vw - var(--width-papel) * 0.5);
 
-    --font-size-texto-carta: calc(var(--width-papel) * 0.0305);
+    --font-size-texto-carta: calc(var(--height-papel) * 0.021);
 }
 
 .papel {
