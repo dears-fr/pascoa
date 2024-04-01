@@ -1,0 +1,131 @@
+:root {
+    --width-envelope: calc(var(--width-papel) * 1.1);
+    --height-envelope: calc(var(--height-papel) * 0.5 * 1.1);
+}
+
+.texto-envelope {
+    position: absolute;
+    top: calc(var(--height-envelope) * 0.4);
+}
+
+.fonte-envelope {
+    top: calc(var(--height-envelope) * 0.5);
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    font-size: calc(var(--width-envelope) * 0.06);
+    padding-left: calc(var(--width-envelope) * 0.06);
+    color: antiquewhite;
+    margin: 0;
+  }
+
+.envelope {
+    position: absolute;
+    width: var(--width-envelope);
+    height: var(--height-envelope);
+    transform-origin: top left;
+}
+
+.fundo-envelope {
+    z-index: 1;
+    background-color: #058bc9;
+}
+
+.pseudo-frente-envelope {
+    z-index: 4;
+}
+
+.frente-envelope {
+    width: 100%;
+    height: 100%;
+    background-color: #33bdfd;
+    clip-path: polygon(0 0%, 50% 30%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.tampa-envelope {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 50% 30%);
+    background-color: #02abf9;
+    transform-origin: top;
+}
+
+.pseudo-tampa-envelope {
+    overflow: visible;
+}
+
+/*aberto-tirado*/
+/*deve ser o mesmo do 100% da animação*/
+.envelope-tirado {
+    top: calc(var(--height-papel) + var(--top-papel));
+    left: calc(50vw - var(--width-envelope) * 0.5);
+    transform: rotateZ(3deg);
+}
+
+.pseudo-tampa-envelope-aberta {
+    z-index: 1;
+}
+
+.tampa-envelope-aberta {
+    transform: rotateX(179deg);
+    box-shadow: 0px 1px 0px #028dce;
+}
+
+/*fechado-colocado*/
+/*deve ser o mesmo de 0% da animação*/
+.envelope-colocado {
+    top: calc(var(--top-papel) - var(--height-papel) * 0.5 * 0.05);
+    left: calc(50vw - var(--width-envelope) * 0.5);
+    transform: rotateZ(0);
+}
+
+.pseudo-tampa-envelope-fechada {
+    z-index: 5;
+}
+
+.tampa-envelope-fechada {
+    transform: rotateX(3deg);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tira-envelope {
+    animation: tirar-envelope 3s forwards;
+}
+
+.coloca-envelope {
+    animation: tirar-envelope 3s forwards reverse;
+}
+
+.abre-tampa-envelope {
+    animation: abrir-tampa-envelope 1s forwards;
+}
+
+.fecha-tampa-envelope {
+    animation: abrir-tampa-envelope 1s forwards reverse;
+}
+
+@keyframes tirar-envelope {
+    0% {
+        top: calc(var(--top-papel) - var(--height-papel) * 0.5 * 0.05);
+        left: calc(50vw - var(--width-envelope) * 0.5);
+        transform: rotateZ(0);
+    }
+
+    100% {
+        top: calc(var(--height-papel) + var(--top-papel));
+        left: calc(50vw - var(--width-envelope) * 0.5);
+        transform: rotateZ(3deg);
+    }
+}
+
+@keyframes abrir-tampa-envelope {
+    0% {
+        transform: rotateX(3deg);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: rotateX(179deg);
+        box-shadow: 0px 1px 0px #028dce;
+    }
+}

@@ -2,164 +2,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/retrato/estilos.css">
-    <link rel="stylesheet" href="css/retrato/partes.css">
-    <link rel="stylesheet" href="css/retrato/envelope.css">
-    <link rel="stylesheet" href="css/retrato/papel.css">
-    <link rel="stylesheet" href="css/retrato/objetos/egg1.css">
-    <link rel="stylesheet" href="css/retrato/objetos/coracao1.css">
-
-    <link rel="stylesheet" href="css/paisagem/estilos.css">
-    <link rel="stylesheet" href="css/paisagem/partes.css">
-    <link rel="stylesheet" href="css/paisagem/envelope.css">
-    <link rel="stylesheet" href="css/paisagem/papel.css">
-    <link rel="stylesheet" href="css/paisagem/objetos/egg1.css">
-    <link rel="stylesheet" href="css/paisagem/objetos/coracao1.css">
+    <title>carta</title>
+    <link rel="stylesheet" href="estilos/ovo.css">
+    <link rel="stylesheet" href="estilos/body.css">
+    <link rel="stylesheet" href="estilos/coracao.css">
+    <link rel="stylesheet" href="estilos/envelope.css">
+    <link rel="stylesheet" href="estilos/papel.css">
 
     <!--fonte-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!--fonte texto-->
+    <!--fonte carta-->
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/retrato/fontes/fonte-texto.css">
-    <link rel="stylesheet" href="css/paisagem/fontes/fonte-texto.css">
-
 
     <!--fonte coração-->
     <link href="https://fonts.googleapis.com/css2?family=Love+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/retrato/fontes/fonte-coracao1.css">
-    <link rel="stylesheet" href="css/paisagem/fontes/fonte-coracao1.css">
 
     <!--fonte envelope-->
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/retrato/fontes/fonte-envelope.css">
-    <link rel="stylesheet" href="css/paisagem/fontes/fonte-envelope.css">
-
-    <title>mini-carta</title>
-
-    <style>
-        body {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <div id="parte-cima">
-        <div id="papel" class="parte-cima">
-            <div class="design-interno">
-                <div class="linhas">
-                    <p class="non-selectable cherry-swash-regular fonte espaco-coracao">
-                        _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    <div id="parte-cima-papel" class="parte-cima-papel">
+        <div id="papel" class="papel">
+            <div id="design-interno" class="design-interno">
+                <div id="texto-carta" class="texto-carta fonte-texto-carta">
+                    <p>
+                        Cara Ratinha,
                     </p>
-    
-                    <p class="non-selectable cherry-swash-regular fonte">
-                        _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                    </p>
-    
-                    <p class="non-selectable cherry-swash-regular fonte">
-                        __________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                    </p>
-                </div>
-                
-                <div class="texto">
-                    <p class="cherry-swash-regular fonte espaco-coracao">
+
+                    <p>
                         Escrevo-te esta carta para expressar os meus sentimentos por você pelo dia do chocolate, chocolate este que recebi com bastante carinho por vc há alguns dias. Não é a primeira vez que como chocolate, porém esses tinham um gosto diferente... Um leve toque fofura com sensação de apreço. Me senti bastante especial por ter recebido algo feito tão minuciosamente.
                     </p>
     
-                    <p class="cherry-swash-regular fonte">
+                    <p>
                         Descobri por meio de uma ratinha que algumas pessoas nas redondezas sabem fazer uns docinhos personalizados, por isso estou te enviando cerca de alguns docinhos p vc saborear os doces que tanto gosta. Eles não têm o gosto dos seus pq os seus são especiais, mas espero que cerca de goste.
                     </p>
-    
-                    <p class="cherry-swash-regular fonte">
+
+                    <p>
                         O dia é da páscoa, mas sempre bom lembrar das coisas que acontecem não só em datas como esta, mas também em momentos aleatórios, como algumas coisas que vc me fala que são tão engraçadas que eu não sei como vc não falou de propósito. Essas simples coisas me fazem ficar contente de saber que eu te conheço.
                     </p>
     
-                    <p class="cherry-swash-regular fonte espaco-coelho">
+                    <p>
                         Vc é cerca de especial pra mim tá bom, minha companhia diária.
                     </p>
     
-                    <p class="cherry-swash-regular fonte centralizado">
+                    <p class="ultimo-paragrafo-texto-carta">
                         FELIZ PÁSCOA RATINHA!!!
                     </p>
                 </div>
             </div>
+        </div>
+
+        <div id="coracao" class="coracao"><p class="fonte-coracao nao-selecionavel">FR</p></div>
+    </div>
     
-            <div class="egg1">
-                <div class="coelho coelho-visivel"></div>
-                <div id="metade-egg"></div>
-                <div id="rachado"></div>
-            </div>
-    
-            <div id="coracao1" class="coracao1"><p class="love-light-regular fonte-coracao non-selectable">FR</p></div>
+    <div id="parte-baixo-papel" class="parte-baixo-papel parte-baixo-dobrada">
+        <!--preenchido com js-->
+
+        <div id="ovo" class="ovo">
+            <div id="coelho" class="coelho"></div>
         </div>
     </div>
 
-    <div id="parte-baixo">
-        <div id="papel" class="parte-baixo">
-            <div id="design-interno" class="design-interno oculto">
-                <div class="linhas">
-                    <p class="non-selectable cherry-swash-regular fonte espaco-coracao">
-                        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                    </p>
-    
-                    <p class="non-selectable cherry-swash-regular fonte">
-                        ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                    </p>
-    
-                    <p class="non-selectable cherry-swash-regular fonte">
-                        ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-                    </p>
-                </div>
-                <div class="texto">
-                    <p class="cherry-swash-regular fonte espaco-coracao">
-                        Escrevo-te esta carta para expressar os meus sentimentos por você pelo dia do chocolate, chocolate este que recebi com bastante carinho por vc há alguns dias. Não é a primeira vez que como chocolate, porém esses tinham um gosto diferente... Um leve toque fofura com sensação de apreço. Me senti bastante especial por ter recebido algo feito tão minuciosamente.
-                    </p>
-    
-                    <p class="cherry-swash-regular fonte">
-                        Descobri por meio de uma ratinha que algumas pessoas nas redondezas sabem fazer uns docinhos personalizados, por isso estou te enviando cerca de alguns docinhos p vc saborear os doces que tanto gosta. Eles não têm o gosto dos seus pq os seus são especiais, mas espero que cerca de goste.
-                    </p>
-    
-                    <p class="cherry-swash-regular fonte">
-                        O dia é da páscoa, mas sempre bom lembrar das coisas que acontecem não só em datas como esta, mas também em momentos aleatórios, como algumas coisas que vc me fala que são tão engraçadas que eu não sei como vc não falou de propósito. Essas simples coisas me fazem ficar contente de saber que eu te conheço.
-                    </p>
-    
-                    <p class="cherry-swash-regular fonte espaco-coelho">
-                        Vc é cerca de especial pra mim tá bom, minha companhia diária.
-                    </p>
-    
-                    <p class="cherry-swash-regular fonte centralizado">
-                        FELIZ PÁSCOA RATINHA!!!
-                    </p>
-                </div>
+    <div id="fundo-envelope" class="envelope fundo-envelope envelope-colocado"></div>
+    <div id="pseudo-frente-envelope" class="envelope pseudo-frente-envelope envelope-colocado">
+        <div id="frente-envelope" class="frente-envelope">
+            <div id="texto-envelope" class="texto-envelope">
+                <p class="fonte-envelope nao-selecionavel">DE: ratinho tortuguita</p>
+                <p class="fonte-envelope nao-selecionavel">P/: ratinha bombomleta♡ 🦋</p>
             </div>
-    
-            <div id="egg1" class="egg1 oculto">
-                <div id="coelho" class="coelho coelho-visivel"></div>
-                <div id="metade-egg"></div>
-                <div id="rachado"></div>
-            </div>
-    
-            <div class="coracao1"><p class="love-light-regular fonte-coracao non-selectable">FR</p></div>
         </div>
     </div>
 
-    <div id="envelope-fundo" class="envelope envelope-fundo"></div>
-    <div id="envelope-tampa" class="envelope envelope-tampa"></div>
-    <div id="envelope-frente" class="envelope envelope-frente">
-        <div class="texto-envelope">
-            <p id="texto-envelope" class="cedarville-cursive-regular fonte-envelope non-selectable">DE: ratinho tortuguita</p>
-            <p id="texto-envelope" class="cedarville-cursive-regular fonte-envelope non-selectable">P/: ratinha bombomleta♡ 🦋</p>
-        </div>
+    <div id="pseudo-tampa-envelope" class="envelope pseudo-tampa-envelope pseudo-tampa-envelope-fechada envelope-colocado">
+        <div id="tampa-envelope" class="tampa-envelope tampa-envelope-fechada"></div>
     </div>
 
-    <script>
-        window.addEventListener('load', function() {
-            document.body.style.display = 'block';
-        });
-    </script>
-
-    <script src="js/script.js"></script>
+    <script src="js/papel.js"></script>
+    <script src="js/envelope.js"></script>
 </body>
 </html>
